@@ -10,7 +10,7 @@ function PinList({listOfPins}) {
      xl:columns-5 space-y-6 mx-auto'>
         {listOfPins.map((item,index)=>(
            
-               <PinItem pin={item} />
+           <PinItem key={item.id} pin={item} />
            
         ))}
     </div>

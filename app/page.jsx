@@ -21,11 +21,11 @@ export default function Home() {
       );
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
-       
-       
-      setListOfPins((listOfPins)=>
-      [...listOfPins,doc.data()]);
-      });
+        setListOfPins((listOfPins) => [
+          ...listOfPins, 
+          { ...doc.data(), id: doc.id } // Properly include the `id` inside an object
+        ]);
+    });
   }
 
   return (
