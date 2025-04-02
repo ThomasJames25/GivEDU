@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import UserTag from '../UserTag'; // Ensure this is the correct path to the UserTag component
 
 function PinItem({ pin, user }) {

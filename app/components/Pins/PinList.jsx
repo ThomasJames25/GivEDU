@@ -1,3 +1,4 @@
+'use client';
 import app from '@/app/Shared/firebaseConfig'
 import React, { useEffect } from 'react'
 import PinItem from './PinItem'

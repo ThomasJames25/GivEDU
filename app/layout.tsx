@@ -1,7 +1,7 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
 import Provider from './Provider';
-import Header from './components/Header'; // Import the Header component
+import Header from './components/Header'; // Import the Hgit add .reader component
 
 const inter = Inter({ subsets: ['latin'] });
 
