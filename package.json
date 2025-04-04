@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
     "@headlessui/react": "^1.7.15",
     "@types/node": "20.3.3",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "autoprefixer": "10.4.14",
-    "firebase": "^11.5.0",
+    "firebase": "^11.6.0",
     "next": "^15.2.4",
     "next-auth": "^4.22.1",
     "postcss": "^8.5.3",
