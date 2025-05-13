@@ -29,7 +29,7 @@ function Form() {
   const uploadFile = () => {
     const storageRef = ref(storage, 'pinterest/' + file.name);
     uploadBytes(storageRef, file).then((snapshot) => {
-      console.log("File Uploaded")
+      console.log("File Uploaded");
     }).then(resp => {
       getDownloadURL(storageRef).then(async (url) => {
         console.log("DownloadUrl", url);
@@ -41,16 +41,17 @@ function Form() {
           email: session.user.email,
           userImage: session.user.image,
           id: postId
-        }
-
+        };
+  
         await setDoc(doc(db, 'pinterest-post', postId), postData).then(resp => {
-          console.log("Saved")
-          setLoading(true);
-          router.push("/" + session.user.email)
-        })
-      })
-    })
-  }
+          console.log("Saved");
+          setLoading(false); // Set loading to false once post is saved
+          router.push("/" + session.user.email); // Redirect to user's profile page
+        });
+      });
+    });
+  };
+  
 
   return (
     <div className='bg-white p-16 rounded-2xl'>
