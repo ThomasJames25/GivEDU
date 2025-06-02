@@ -6,7 +6,7 @@ function PinList({ listOfPins }) {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {listOfPins.length > 0 ? (
         listOfPins.map((pin) => (
-          <PinItem key={pin.id} pin={pin} user={pin.user || { name: 'Unknown' }} />
+          <PinItem key={pin.id} pin={pin} user={pin.user} />
         ))
       ) : (
         <p>No posts available.</p>

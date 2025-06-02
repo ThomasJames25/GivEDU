@@ -1,5 +1,3 @@
-// ❌ DO NOT add 'use client' here
-
 import './globals.css';
 import { Inter } from 'next/font/google';
 import Provider from './Provider';
@@ -19,13 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
-        <div className={inter.className}>
-          <Provider>
-            <Header />
-            {children}
-          </Provider>
-        </div>
+      <body className={inter.className}>
+        <Provider>
+          <Header />
+          {children}
+        </Provider>
       </body>
     </html>
   );

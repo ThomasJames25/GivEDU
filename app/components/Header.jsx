@@ -77,14 +77,20 @@ function Header() {
 
       <HiSearch className='text-[25px] 
         text-text-blue md:hidden'/>
-      <HiBell className='text-[25px] md:text-[60px] text-icon-green cursor-pointer' />
-      <HiChat className='text-[25px] md:text-[60px] text-icon-green cursor-pointer' />
+        <button
+  className='bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition'
+  onClick={() => router.push('/listings')}
+>
+  Listings
+</button>
+
       {session?.user ?
         <Image src={session.user.image}
           onClick={() => router.push('/' + session.user.email)}
           alt='user-image' width={60} height={60}
           className='hover:bg-text-blue p-2
         rounded-full cursor-pointer'/> :
+        
 
         <button className='font-semibold p-2 px-4 rounded-full'
           onClick={() => signIn()}>Login</button>}

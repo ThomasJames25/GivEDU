@@ -60,7 +60,7 @@ console.log("Session:", session);
         desc,
         image: url,
         userName: session.user.name,
-        email: session.user.email,
+        email: session.user.email.toLowerCase(),
         userImage: session.user.image,
         id: postId,
       };
@@ -69,6 +69,7 @@ console.log("Session:", session);
       console.log("Post saved to Firestore");
   
       setLoading(false);
+      console.log("session.user.email:", session?.user?.email);
       router.push("/" + session.user.email);
   
     } catch (error) {
